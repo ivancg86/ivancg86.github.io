@@ -1,0 +1,327 @@
+{
+    "es":
+    {
+        "navTienda": "Tiendas",
+        "descTienda": "Visita nuestras tiendas!",
+        "btnTienda": "Ver Tiendas",
+
+        "navJuego": "Juegos",
+        "btnJuego": "Jugar",
+
+        "navOferta": "Ofertas",
+        "descOferta": "Descubre nuestras Ofertas!",
+        "btnOferta": "Ver Ofertas",
+
+        "topMarcas": "TOP MARCAS",
+        "footer": "Creado por Grupo2",
+        "volverArriba": "Volver Arriba",
+
+        "horario": "Horario",
+        "descTienda1": "Toda variedad de patatas, cebollas y ajos. Patatas Rep. Pontiac, Kennebek, Monalisa, Agra, Desayuno, Violeta, cebollas de higueras, de fuentes, normales, del platillo. Ajos rojos y negros, boniatos crudos y cocidos.",
+        "catTienda1": "Fruta y Verdura",
+        "descTienda2": "Aurora Mateo es una tienda dedicada a la venta de calzado para señora y moda juvenil, en la que ofrecemos a nuestros clientes una venta personalizada con la mejor relación calidad/precio del mercado.",
+        "catTienda2": "Ropa",
+        "descTienda3": "Tenemos una trayectoria de más de 30 años, procurando dar los mejores productos y el mejor servicio. Hemos evolucionado a lo largo del tiempo y nos hemos especializado en algunos productos.",
+        "catTienda3": "Huevos y Aves de Corral",
+        "descTienda4": "Elaboraciones propias de calidad. Ternera, cordero, cabrito y potro. Siempre de primera calidad. Elaborados, siempre con base de carne, de verduras, quesos, foie,   etc.",
+        "catTienda4": "Carniceria",
+        "descTienda5": "En el mercado, nosotros estamos desde su inauguración (hace 47 años) trabajando el pescado de las lonjas mediterráneas. Nuestro plato estrella es lógicamente el pescado fresco y marisco.",
+        "catTienda5": "Bar-Restaurante",
+        "descTienda6": "Estamos especializados en productos ibéricos, charcutería selecta y ofrecemos una gran variedad en quesos. Además tenemos una amplia gama en productos sin gluten.",
+        "catTienda6": "Charcuterías y Tocinerías",
+
+        "dia1": "Lunes de",
+        "dia2": "Martes de",
+        "dia3": "Miércoles de",
+        "dia4": "Jueves de",
+        "dia5": "Viernes de",
+        "dia6": "Sabado de",
+        "dia7": "Domingo de",
+        
+
+        "desJuego1": "¡A nuestro cocinero más importante se le está quemando la cocina! Ayúdalo a recoger todos los alimentos que puedas para conseguir menos pérdidas en el negocio.",
+        "desJuego2": "¡A nuestro frutero se le han escapado las frutas de las cajas! Ayúdalo a recogerlas antes de que se rompan al caer y no pueda venderlas.",
+        "desJuego3": "¡A nuestro chef más importante le faltan ingredientes! Ayúdalo a recoger todos los alimentos que puedas sin chocarte ni pisarte.",
+
+        "descuento":"Descuento",
+        "puntos":"Puntos",
+        "descuento10":"Consigue alcanzar la meta de puntos para conseguir un 10% de descuento en cualquier tienda del mercado!Cuidado! La oferta es limitada hasta el 31 de Diciembre de 2020.",
+        "juegaFR":"Juega a Food Runner",
+        "decuento20":"Consigue alcanzar la meta de puntos para conseguir un 20% de descuento en cualquier tienda del mercado! Cuidado! La oferta es limitada hasta el 31 de Diciembre de 2020.",
+        "juegaFC":"Juega a Fruit Catch",
+        "decuento30":"Consigue alcanzar la meta de puntos para conseguir un 30% de descuento en cualquier tienda del mercado! Cuidado! La oferta es limitada hasta el 31 de Diciembre de 2020.",
+        "juegaCS":"Juega a Cart Swallow",
+
+        "juegoCSinicio":"Movimiento con 'W''A''S''D \n \n Pulse barra espaciadora para empezar",
+        "juegoCSpuntos":"Puntos:",
+
+        
+        "login":"Iniciar Sesión",
+        "loginEmail":"Correo Electrónico",
+        "loginPassword":"Contraseña",
+        "loginRemember":"Recuerdame",
+
+
+        "textoFC":"Movimiento con las flechas laterales",
+        "restartFC": "Pulse ENTER para volver a jugar",
+        "vidas": "Vidas:",
+        "espacioFC": "Pulse barra espaciadora para empezar",
+
+        "djTitle":"Explicación breve de los juegos",
+        "djDescripcionFood":" Es un juego en el que debes ir saltando los obstáculos del mapa utilizando las flechas de “Arriba”, “izquierda” y “Derecha” recogiendo el máximo de alimentos, evitando las pociones de veneno, antes de que seas alcanzado por el fuego. Si el fuego te alcanza, pierdes.",  
+        "djDescripcionFruit":"Es un juego donde caen frutas del cielo. Pulsa la tecla “Espacio” para empezar. Te mueves horizontalmente con las flechas del teclado (“Derecha” e “Izquierda”). Coge las máximas frutas que puedas. El juego acaba cuando pierdes las tres vidas (4 oportunidades).",
+        "djDescripcionart":"Es el típico juego de snake. Debes coger todas las manzanas que puedas sin pisarte la cola ni salirte de los márgenes. Pulsa la tecla “Espacio” para empezar. Te mueves con las teclas “A”, “W”, “S”, “D”.",
+
+        "descTitle":"Descripción:",
+        "desc1":"Página Web centrada en la divulgación de un mercado inventado. Se basa en la intención del cliente de conseguir ofertas exclusivas de la web completando un número de juegos integrados en la misma. En esta web se puede consultar toda la información necesaria de las tiendas del mercado, las ofertas y sus requerimientos y tres juegos que se desbloquean consecuentemente.",
+        "desc2":"Entre los objetivos más importante de la web podemos encontrar que:",
+        "desc3":"Entre los objetivos más importantes de los juegos podemos encontrar que:",
+        "desc4":"Entre los objetivos más importantes de la administración podemos encontrar que:",
+        "desclist1":"Ha de ser atractiva y que capte la atención.",
+        "desclist2":"Ha de dar a conocer el CEP y el mercado.",
+        "desclist3":"Multilingüe.",
+        "desclist4":"Ha de cuidar la usabilidad y la experiencia del usuario en todo momento.",
+        "desclist5":"El juego ha de requerir del correo del usuario para comenzar.",
+        "desclist6":"El juego ha de tener una meta de puntos para conseguir desbloquear el resto.",
+        "desclist7":"Cada juego ha de contener una parte divulgativa del mercado.",
+        "desclist8":"La app ha de permitir dar de alta y de baja a los usuarios administradores, además de poder modificar las contraseñas de los usuarios.",
+        "desclist9":"Lo mismo anterior pero con usuarios generales.",
+        "desclist10":"Posibilidad de consultar ofertas.",
+        "desclist11":"El administrador ha de poder modificar las ofertas de la web.",
+        "desclist12":"El administrador ha de poder consultar y modificar cuantos puntos máximos se pueden ganar en un juego.",
+
+        "docuTitle":"Descripción",
+        "docu1":"Web centrada en la divulgación de un mercado con el objetivo de atraer usuarios a través de los minijuegos.",
+        "docu1.1":"Ver más",
+        "docu2":"Paleta de Colores",
+        "docu3":"Diagrama Base de Datos",
+        "docu4":"Mapa Mental",
+        "docu5":"Diagrama de Casos de Uso",
+        "docu6":"Target Customer",
+        "docu6.1":"Ver Documento",
+
+        "navDescripcion":"Descripción",
+        "navDescripcionJ":"Descripcion juegos",
+        "navDocumentacion":"Documentación"
+        
+        
+    },
+
+    "en":
+    {
+        "navTienda": "Shops",
+        "descTienda": "Visit all our shops!",
+        "btnTienda": "See Shops",
+
+        "navJuego": "Games",
+        "btnJuego": "Play",
+
+        "navOferta": "Offers",
+        "descOferta": "Discover our Offers!",
+        "btnOferta": "See Offers", 
+
+        "topMarcas": "TOP BRANDS",
+        "footer": "Created by Grupo2",
+        "volverArriba": "Go Back Up",
+
+        "horario": "Schedule",
+        "descTienda1": "All variety of potatoes, onions and garlic. Potatoes Pontiac, Kennebek, Monalisa, Agra, Breakfast, Violet, Figueras and Fuentes onions, normal, from the dish. Red and black garlic, raw and cooked sweet potatoes.",
+        "catTienda1": "Fruit and Vegetables",
+        "descTienda2": "Aurora Mateo is a store dedicated to the sale of footwear for women and youth fashion, in which we offer our customers a personalized sale with the best value for money in the market.",
+        "catTienda2": "Clothes",
+        "descTienda3": "We have a trajectory of more than 30 years, trying to give the best products and the best service. We have evolved over time and have specialized in some products.",
+        "catTienda3": "Eggs and Poultry",
+        "descTienda4": "Our own quality products. Veal, lamb, kid and colt. Always of first quality. Elaborated, always with a base of meat, vegetables, cheese, foie, etc.",
+        "catTienda4": "Butcher shop",
+        "descTienda5": "Since its opening (47 years ago), we have been working with fish from Mediterranean fish markets. Our star dish is of course fresh fish and seafood.",
+        "catTienda5": "Bar-Restaurant",
+        "descTienda6": "We specialize in Iberian products, select delicacies and offer a wide variety of cheeses. We also have a wide range of gluten-free products.",
+        "catTienda6": "Delicatessen and Cooking Shops",
+
+        "dia1": "Monday",
+        "dia2": "Tuesday",
+        "dia3": "Wednesday",
+        "dia4": "Thursday",
+        "dia5": "Friday",
+        "dia6": "Saturday",
+        "dia7": "Sunday",
+
+        "desJuego1": "Our most important chef's kitchen is on fire! Help him to collect as much food as you can to get fewer losses in the business.",
+
+        "desJuego2": "Our chef has let the fruit out of the boxes! Help him pick them up before they break when they fall over and he can't sell them.",
+        "desJuego3": "Our most important chef is missing ingredients! Help him collect as much food as you can without bumping or stepping on it.",
+
+        
+        "descuento":"Discount",
+        "puntos":"Points",
+        "descuento10":"Achieve the goal of points to get 10% discount in any store in the market! The offer is limited until December 31st, 2020.",
+        "juegaFR":"Play Food Runner",
+        "decuento20":"Achieve the points goal to get a 20% discount in any store in the market! Watch out! The offer is limited until December 31st, 2020.",
+        "juegaFC":"Play Fruit Catch",
+        "decuento30":"Achieve the points goal to get a 30% discount in any store in the market! Watch out! The offer is limited until December 31st, 2020.",
+        "juegaCS":"Play Cart Swallow",
+
+
+        "juegoCSinicio":"Movement with 'W''A''S''D' Press space bar to start",
+        "juegoCSpuntos":"Points:",
+
+
+        "login":"Log in",
+        "loginEmail":"Email address",
+        "loginPassword":"Password",
+        "loginRemember":"Remember me",
+
+        "textoFC":"Movement with the side arrows",
+        "restartFC": "Press ENTER to play again",
+        "vidas": "Lives:",
+        "espacioFC": "Press the space bar to start",
+
+        "djTitle":"Brief explanation of the games",
+        "djDescripcionFood":"It is a game in which you must jump over the obstacles on the map using the “Up”, “Left” and “Right” arrows, collecting as much food as possible, avoiding the poison potions, before you are hit by the fire. If the fire hits you, you lose.",
+        "djDescripcionFruit":"It is a game where fruits fall from the sky. Press the “Space” key to start. Move horizontally with the arrow keys (“Right” and “Left”). Catch as many fruits as you can. The game ends when you lose all three lives (4 opportunities).",
+        "djDescripcionart":"It is the typical snake game. You must catch as many apples as you can without stepping on your tail or going out of the margins. Press the “Space” key to start. You move with the keys “A”, “W”, “S”, “D”.",
+
+        "descTitle":"Description:",
+        "desc1":"Website focused on the disclosure of an invented market. It is based on the customer's intention to get exclusive offers from the website by completing a number of games integrated in it. In this website you can consult all the necessary information about the market stores, the offers and their requirements and three games that are unlocked consequently.",
+        "desc2":"Among the most important objectives of the web we can find that:",
+        "desc3":"Among the most important objectives of the games we can find that:",
+        "desc4":"Among the most important objectives of the administration we can find that:",
+        "desclist1":"It must be attractive and attention-grabbing.",
+        "desclist2":"It has to make the CEP and the market known.",
+        "desclist3":"Multilingual.",
+        "desclist4":"It has to take care of usability and user experience at all times.",
+        "desclist5":"The game will require the user's email to start.",
+        "desclist6":"The game must have a goal of points to unlock the rest.",
+        "desclist7":"Each set must contain an informative part of the market.",
+        "desclist8":"The app must be able to register and deregister administrator users, as well as modify user passwords.",
+        "desclist9":"Same as above but with general users.",
+        "desclist10":"Possibility of consulting offers.",
+        "desclist11":"The administrator must be able to modify the web offers.",
+        "desclist12":"The administrator must be able to consult and modify the maximum points that can be earned in a game.",
+
+        "docuTitle":"Description",
+        "docu1":"Web focused on the disclosure of a market with the aim of attracting users through mini-games.",
+        "docu1.1":"See more",
+        "docu2":"Color Palette",
+        "docu3":"Database Diagram",
+        "docu4":"Mental Map",
+        "docu5":"Use Case Diagram",
+        "docu6":"Target Customer",
+        "docu6.1":"See Document",
+
+        "navDescripcion":"Description",
+        "navDescripcionJ":"Games description",
+        "navDocumentacion":"Documentation"
+        
+
+    },
+
+    "cat":
+    {
+        "navTienda": "Botigues",
+        "descTienda": "Visita totes les nostres botigues!",
+        "btnTienda": "Veure Botigues",
+
+        "navJuego": "Jocs",
+        "btnJuego": "Jugar",
+
+        "navOferta": "Ofertes",
+        "descOferta": "Descobreix les nostres Ofertes!",
+        "btnOferta": "Veure Ofertes",
+
+        "topMarcas": "TOP MARQUES",
+        "footer": "Creat per Grupo2",
+        "volverArriba": "Torna A Dalt",
+
+        
+        "horario": "Horaris",
+        "descTienda1": "Tota varietat de patates, cebes i alls. Patates Rep. Pontiac, Kennebek, Monalisa, Agria, Bufet, Violeta, cebes de figueres, de fuentes, normals, del platillo. Alls vermells i negres, boniatos crus i cuits.",
+        "catTienda1": "Fruita i verdura",
+        "descTienda2": "Aurora Mateo és una botiga dedicada a la venda de calçat per a senyora i moda juvenil, en la que oferim als nostres clients una venda personalitzada amb la millor relació entre qualitat i preu del mercat.",
+        "catTienda2": "Roba",
+        "descTienda3": "Tenim una trajectòria de més de 30 anys, procurant donar els millors productes i el millor servei. Hem evolucionat al llarg del temps i ens hem especialitzat en alguns productes.",
+        "catTienda3": "Ous i aviram",
+        "descTienda4": "Elaboracions pròpies de qualitat. Vedella, xai, cabrit i poltre. Sempre de primera qualitat. Elaborats, sempre amb base de carn, de verdures, formatges, foie, etc.",
+        "catTienda4": "Carnisseries",
+        "descTienda5": "Al mercat, nosaltres hi som des de la seva inauguració (fa 47 anys) treballant el peix de les llotges mediterrànies. El nostre plat estrella és lògicament el peix fresc i marisc.",
+        "catTienda5": "Bar-Restaurant",
+        "descTienda6": "Estem especialitzats en productes ibèrics, xarcuteria selecta i oferim una gran varietat en formatges. A més tenim una àmplia gamma en productes sense gluten.",
+        "catTienda6": "Xarcuteries i Cansaladeries",
+
+        "dia1": "Dilluns",
+        "dia2": "Dimarts",
+        "dia3": "Dimecres",
+        "dia4": "Dijous",
+        "dia5": "Divendres",
+        "dia6": "Dissabte",
+        "dia7": "Diumenge",
+
+
+        "desJuego1": "Al nostre xef més important se li està cremant la cuina! Ajuda'l a recollir tots els aliments que puguis per aconseguir menys pèrdues en el negoci.",
+        "desJuego2": "Al nostre xef se li han escapat les fruites de les caixes! Ajuda-li a recollir-les abans que es trenquin quan es caiguin i no pugui vendre-les.",
+        "desJuego3": "Al nostre xef més important li falten ingredients! Ajuda'l a recollir tots els aliments que puguis sense xocar ni pisarte.",
+
+        "descuento":"Descompte",
+        "puntos":"Punts",
+        "descuento10":"Aconsegueix arribar a la meta de punts per aconseguir un 10% de descompte en qualsevol botiga del mercat! Compte! L'oferta està limitada fins el 31 de Desembre de 2020.",
+        "juegaFR":"Juga a Food Runner",
+        "decuento20":"Aconsegueix arribar a la meta de punts per aconseguir un 20% de descompte en qualsevol botiga del mercat! Compte! L'oferta està limitada fins el 31 de Desembre de 2020.",
+        "juegaFC":"Juga a Fruit Catch",
+        "decuento30":"Aconsegueix arribar a la meta de punts per aconseguir un 30% de descompte en qualsevol botiga del mercat! Compte! L'oferta està limitada fins el 31 de Desembre de 2020.",
+        "juegaCS":"Juga a Cart Swallow",
+
+
+        "juegoCSinicio":"Moviment amb 'W''A''S''D \n \n Prem barra espaciadora per començar",
+        "juegoCSpuntos":"Punts:",
+
+
+        "login":"Iniciar Sessió",
+        "loginEmail":"Correu Electrònic",
+        "loginPassword":"Contraseña",
+        "loginRemember":"Recorda'm",
+
+        "textoFC":"Moviment amb les fletxes laterals",
+        "restartFC": "Premi ENTER per tornar a jugar",
+        "vidas": "Vides:",
+        "espacioFC": "Premi barra d'espai per començar",
+
+        "djTitle":"Explicació breu dels jocs",
+        "djDescripcionFood": "És un joc en el qual has d'anar saltant els obstacles de mapa utilitzant les fletxes de “A dalt”,“Esquerra” i “Dreta” recollint el màxim de aliments, evitant les pocions de verí, abans de que siguis aconseguit pel foc. Si el foc et aconsegueix, perds.",
+        "djDescripcionFruit":"És un joc on cauen fruites de el cel. Prem la tecla “Espai” per començar. Et mous horitzontalment amb les fletxes del teclat (“Dreta” i “Esquerra”). Agafa les màximes fruites que puguis. El joc acaba quan perds les tres vides (4 oportunitats).",
+        "djDescripcionart":"És el típic joc de snake. Has d'agafar totes les pomes que puguis sense pisarte la cua ni sortir-te dels marges. Prem la tecla “Espai” per començar. Et mous amb les tecles “A”, “W”, “S”, “D”.",
+
+        "descTitle":"Descripció:",
+        "desc1":"Lloc web centrat en la divulgació d’un mercat inventat. Es basa en la intenció del client d’obtenir ofertes exclusives del lloc web completant diversos jocs integrats al mateix. En aquest lloc web podeu consultar tota la informació necessària sobre les botigues del mercat, les ofertes i els seus requisits i tres jocs que es desbloquegen en conseqüència.",
+        "desc2":"Entre els objectius més important de la web podem trobar que:",
+        "desc3":"Entre els objectius més importants dels jocs podem trobar que:",
+        "desc4":"Entre els objectius més importants de l'administració podem trobar que:",
+        "desclist1":"Ha de ser atractiva i que capti l'atenció.",
+        "desclist2":"Ha de donar a conèixer el CEP i el mercat.",
+        "desclist3":"Multilingüe.",
+        "desclist4":"Ha de tenir cura de la usabilitat i l'experiència d'usuari en tot moment.",
+        "desclist5":"El joc ha de requerir de l'correu de l'usuari per a començar.",
+        "desclist6":"El joc ha de tenir una meta de punts per aconseguir desbloquejar la resta.",
+        "desclist7":"Cada joc ha de contenir una part divulgativa de l'mercat.",
+        "desclist8":"L'app ha de permetre donar d'alta i de baixa als usuaris administradors, a més de poder modificar les contrasenyes dels usuaris.",
+        "desclist9":"El mateix anterior però amb usuaris generals.",
+        "desclist10":"Possibilitat de consultar ofertes.    ",
+        "desclist11":"L'administrador ha de poder modificar les ofertes de la web.",
+        "desclist12":"L'administrador ha de poder consultar i modificar quants punts màxims es poden guanyar en un joc.",
+
+        "docuTitle":"Descripció",
+        "docu1":"Web centrada en la divulgació d'un mercat amb l'objectiu d'atreure usuaris a través dels minijocs.",
+        "docu1.1":"Veure més",
+        "docu2":"Paleta de Colors",
+        "docu3":"Diagrama Base de Dades",
+        "docu4":"Mapa Mental",
+        "docu5":"Diagrama de Casos d'Ús",
+        "docu6":"Target Customer",
+        "docu6.1":"Veure Document",
+
+        "navDescripcion":"Descripció",
+        "navDescripcionJ":"Descripcio jocs",
+        "navDocumentacion":"Documentació"
+        
+
+    }
+}
