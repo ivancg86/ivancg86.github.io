@@ -1,0 +1,48 @@
+.cuerpo{
+  background-color: teal;
+}
+
+.navbar-brand{
+  color: #fff;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+}
+
+/* .menu[data-animation="diagonal"] .border-left {
+  transform-origin: top left;
+}
+
+.menu[data-animation="diagonal"] .border-right,
+.menu[data-animation="diagonal"] .border-bottom {
+  transform-origin: bottom right;
+}
+
+.menu[data-animation="diagonal"] a:hover [class^=border]{
+  transition-delay: 0s;
+} */
+
+.menu{
+  background-color: transparent !important;
+  width: 20%;
+  height: 100%;
+}
+
+a{
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+  margin: auto;
+  border-radius: 50px;
+  background: blue;
+
+}
