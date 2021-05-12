@@ -1,0 +1,127 @@
+.color-nav
+{
+    color: white;
+}
+
+.color-nav:hover
+{
+    color: #bebebe;
+    text-decoration: none;
+}
+
+.link_footer
+{
+    margin-bottom: 0rem;
+}
+
+.fw-normal
+{
+    font-weight: 400!important;
+}
+
+.btn-doc
+{
+    color: #fff;
+    background-color: #7FB33E;
+    border-color: #7FB33E;
+    border-radius: 1rem;
+}
+
+.btn-doc:hover
+{
+    color: #fff;
+    background-color: #418042;
+    border-color: #418042;
+    border-radius: 1rem;
+}
+
+.pg-fotos
+{
+    position: absolute;    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.flex-md-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+    width: 100%;
+}
+
+.img-paleta
+{
+    position: relative;
+    float: left;
+    width: 130px;
+    height: 270px;
+    right: -10.5%;
+    top: 20%;
+}
+
+.diagrama-bd
+{
+    width: 641px; 
+    height: 425px; 
+    background: url(../media/files/DatabaseDiagram.png); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.mapa-mental
+{
+    background: url(../media/files/Mapa\ Mental.png); 
+    width: 1100px; 
+    height: 755px; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    border-radius: 2rem;
+}
+
+.diagrama-casosuso
+{
+    background: url(../media/files/usecase-diagram.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 785px;
+    height: 670px;
+    left: 90px;
+    margin-top: 20px;
+}
+
+.target-customer
+{
+    background: url(../media/files/target.JPG); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    width: 495px;
+    height: 412px; 
+    margin-left: 85px;
+    margin-top: 120px; 
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.visually-hidden
+{
+    position: absolute!important;
+    width: 1px!important;
+    height: 1px!important;
+    padding: 0!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    clip: rect(0,0,0,0)!important;
+    white-space: nowrap!important;
+    border: 0!important;
+}
+
+.home-img
+{
+    background-size: cover; 
+    background-repeat: no-repeat;
+    width: 1300px; 
+    height: 480px; 
+    margin-left: 270px;
+    border-radius: 2rem;
+}

@@ -1,0 +1,157 @@
+@font-face{
+    font-family: pixel;
+    src: url(Fipps-Regular.otf);
+}
+
+.fondo{
+    background-image: url("../../media/games/FruitCatch/fondojuego.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 80px;
+    height: 740px;
+    width: 100%;
+    object-fit: contain;
+    background-position: center;
+    display: block;
+     
+}
+
+#puntos{
+    font-family: pixel;
+    font-size: 30px;
+    padding-left: 10px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 0 0 30px white;
+    
+}
+
+.puntuacion{
+    font-family: pixel;
+    font-size: 30px;
+    padding-left: 220px;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 0 0 30px white;
+}
+
+#vidas{
+    font-family: pixel;
+    font-size: 30px;
+    float: right;
+    padding-left: 750px;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 0 0 30px white;
+}
+
+.persona{
+    background-image: url("../../media/games/FruitCatch/personaje.gif");
+    height: 106px;
+    width: 76px;
+    position: absolute;
+}
+
+.fruta{
+    background-image: url("../../media/games/FruitCatch/pera.gif");
+    height: 84px;
+    width: 60px;
+    position: absolute;
+    
+}
+
+
+.posicion{
+    padding-top: 550px;
+    padding-left: 20px;
+    position: absolute;
+    width: 76px;
+}
+
+.posicionFruta{
+    padding-top: 20px;
+    padding-left: 20px;
+    position: absolute;
+}
+
+.vida1{  
+    background-image: url("../../media/games/FruitCatch/corazon.gif");
+    width: 45px;
+    height: 42px;
+    margin-left: 920px;
+    position: absolute;
+    margin-top: 16px;
+    z-index: 1;
+}
+
+.vida2{  
+    background-image: url("../../media/games/FruitCatch/corazon.gif");
+    width: 45px;
+    height: 42px;
+    margin-left: 980px;
+    position: absolute;
+    margin-top: 16px;
+    z-index: 1;
+}
+
+.vida3{  
+    background-image: url("../../media/games/FruitCatch/corazon.gif");
+    width: 45px;
+    height: 42px;
+    margin-left: 1040px;
+    position: absolute;
+    margin-top: 16px;
+    z-index: 1;
+}
+
+#gameover{
+    font-family: pixel;
+    font-size: 80px;
+    padding-left: 210px;
+    padding-top: 250px;
+    float: right;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    text-shadow: 0 0 30px white;
+}
+
+#intro{
+    font-family: pixel;
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 250px;
+    float: right;
+    position: absolute;
+    z-index: 1;
+    visibility: visible;
+    text-shadow: 0 0 30px white;
+}
+
+#espacio{
+    font-family: pixel;
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 340px;
+    float: right;
+    position: absolute;
+    z-index: 1;
+    visibility: visible;
+    text-shadow: 0 0 30px white;
+}
+
+#restart{
+    font-family: pixel;
+    font-size: 30px;
+    padding-left: 170px;
+    padding-top: 450px;
+    float: right;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    text-shadow: 0 0 20px white;
+}
+
+
