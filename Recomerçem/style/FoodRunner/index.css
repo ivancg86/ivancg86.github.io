@@ -1,0 +1,399 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+html, body
+{
+  height: 100%;
+}
+
+.game
+{
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  
+  background: url(../../media/games/FoodRunner/fondococina2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  z-index: -1;
+}
+
+.map
+{
+  position: relative;
+  height: auto;
+  height: 94%; 
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.pg
+{
+  width: 67px;
+  /* max-width: 80px; */
+  height: 122px;
+  /* max-height: 148px; */
+  position: absolute;
+  /* z-index: -1; */
+
+  background: url(../../media/games/FoodRunner/pg/pg_stand_r.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box
+{
+  position: absolute;
+  background: url(../../media/games/FoodRunner/boxes/mueble_cocina.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 80px;
+  /* z-index: -1; */
+}
+
+.estante
+{
+  position: absolute;
+  background: url(../../media/games/FoodRunner/boxes/estanteria.png);
+  background-size: contain;
+  width: 110px;
+  height: 80px;
+  /* z-index: -1; */
+}
+
+.ingredients
+{
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+.scoreboard
+{
+  position: absolute;
+  /* background: url(imagenes/score.png); */
+  background: url(../../media/games/FoodRunner/letreros/score2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 50px;
+  z-index: 1;
+}
+
+.timer
+{
+  position: absolute;
+  /* background: url(imagenes/time.png); */
+  background: url(../../media/games/FoodRunner/letreros/time2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 122px;
+  height: 40px;
+  z-index: 1;
+}
+
+.contador
+{
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  z-index: 1;
+}
+
+.contenedor
+{
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  left: 140px;
+  background: url(../../media/games/FoodRunner/time/numeros/+10.png);
+}
+
+.sumador
+{
+  width: 50px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.puntuacion
+{
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  z-index: 1;
+}
+
+.numeros
+{
+  width: 29px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+  z-index: 1;
+}
+
+.dospuntos
+{
+  width: 10px;
+  height: 30px;
+  background: url(../../media/games/FoodRunner/time/dospuntos.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+  z-index: 1;
+}
+
+.fire
+{
+  position: absolute;
+  background: url(../../media/games/FoodRunner/fire.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  /* height: 460px; */
+  height: 78%;
+  left: 0px;
+  top: 140px;
+  z-index: 1;
+}
+
+.contMenu
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.menu
+{
+  width: 80%;
+  height: 90%;
+  position: relative;
+
+  top: 5%;
+  left: 10%;
+  border: 5px solid white;
+  
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+.blackScreen
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+}
+
+.contInstrucciones
+{
+  position: absolute;
+  width: 100%;
+  height: 12%;
+  top: 82%;
+}
+
+.inst
+{
+  width: 26%;
+  height: 100%;
+
+  margin-left: 37%;
+
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contIngredientes
+{
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 15%;
+}
+
+.itemIngr
+{
+  width: 8%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: left;
+  margin-left: 10%;
+}
+
+.contPuntos
+{
+  width: 100%;
+  height: 4%;
+  top: 52%;
+  position: relative;
+}
+
+.plusScore
+{
+  position: relative;
+  width: 5%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 13.5%;
+  float: left;
+}
+
+.contVolumen
+{
+  width: 100%;
+  height: 6%;
+  position: relative;
+}
+
+.volumen
+{
+  width: 4%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  margin-left: 91%;
+}
+
+.contGameOver
+{
+  width: 100%;
+  height: 25%;
+  top: 10%;
+  position: relative;
+}
+
+.gameover
+{
+  width: 29%;
+  height: 100%;
+  background: url(../../media/games/FoodRunner/letreros/GameOver.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  margin-left: 36.5%;
+}
+
+.contScoreFinal
+{
+  width: 100%;
+  height: 10%;
+  margin-left: 14.5%;
+  position: relative;
+  top: 30%;
+}
+
+.scorefinal
+{
+  width: 21%;
+  height: 100%;
+  background: url(../../media/games/FoodRunner/letreros/score2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  float: left;
+}
+
+.contTimeFinal
+{
+  width: 100%;
+  height: 10%;
+  margin-left: 14.5%;
+  position: relative;
+  top: 15%;
+}
+
+.timeFinal
+{
+  width: 17%;
+  height: 100%;
+  background: url(../../media/games/FoodRunner/letreros/time2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  float: left;
+}
+
+.dospuntosBox
+{
+  width: 1.6%;
+  height: 100%;
+  
+  background: url(../../media/games/FoodRunner/time/dospuntos2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  float: left;
+}
+
+.numerosMenu
+{
+  width: 5%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  float: left;
+
+}
+
+.reload
+{
+  width: 3%;
+  height: 6%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+}
+
+.blur
+{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-color: #ccc; */
+}
+
+.contPress
+{
+  width: 100%;
+  height: 30%;
+  top: -5%;
+  position: relative;
+}
+
+.press
+{
+  background: url(../../media/games/FoodRunner/letreros/presstostart.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 100%;  
+  margin-left: 37.5%;
+}

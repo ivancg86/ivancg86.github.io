@@ -1,0 +1,232 @@
+.banner-video
+{
+    /* padding-bottom: 24px; */
+}
+
+a
+{
+    color: #000;
+}
+
+.lang{
+    margin-bottom: 0;
+}
+.brand-img
+{
+    line-height: 96px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.border-alto2
+{
+    border-color: #d7d7d7!important;
+}
+
+#dia{
+    font-size: .825rem;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+.dia{
+    font-size: .825rem;
+    font-weight: 300;
+    
+    
+}
+.dia:hover{
+    text-decoration: none;
+    cursor: default;
+    color: black;
+}
+
+.mx-12
+{
+    margin-left: .75rem;
+    margin-right: .75rem;
+}
+
+.title
+{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    font-size: 12px;
+    height: 13.2px;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 14px;
+    margin-bottom: 12px;
+}
+
+.titles
+{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.titles2
+{
+    padding-bottom: 10px;
+}
+
+.offers
+{
+    height: 358px;
+    max-width: 318px;
+}
+
+.shadow-offers
+{
+    -webkit-box-shadow: rgba(0,0,0,.1) 0 8px 25px 0;
+    -moz-box-shadow: rgba(0,0,0,.1) 0 8px 25px 0;
+    box-shadow: rgba(0,0,0,.1) 0 8px 25px 0;
+    cursor: pointer;
+    height: 345px;
+    position: relative;
+    margin: 0 12px;
+}
+
+.img-footer
+{
+    width: 40px;
+    height: 40px;
+    float:left;
+    margin-right: 20px;
+}
+
+.footer-fixed
+{
+    width: 100%;
+    bottom: 0;
+    /* position: absolute; */
+    padding: 3em 0;
+}
+
+#p-footer
+{
+    clear: left;
+}
+
+.color-nav
+{
+    color: white;
+}
+
+.color-nav:hover
+{
+    color: #bebebe;
+    text-decoration: none;
+}
+
+.desc
+{
+    color: black
+}
+
+.desc:hover
+{
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+.pdesc
+{
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 12px;
+}
+
+.btnCarHome
+{
+    color: #fff;
+    background-color: #52c053;
+    border-color: #52c053;
+    border-radius: 1rem;
+}
+
+.btnCarHome:hover
+{
+    color: #fff;
+    background-color: #418042;
+    border-color: #418042;
+    border-radius: 1rem;
+}
+
+.mbr-overlay {
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.carousel-caption2 {
+    position: absolute;
+    /* right: 15%; */
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.offer-card
+{
+    
+}
+
+.offer-card:hover
+{
+    background-color: rgb(222, 222, 222);
+    
+}
+
+.offer-link:hover
+{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.horarios
+{
+    border-color: #dedede;
+    border: 1px #dedede;
+    border-style: solid;
+    background-color: #f7f7f7;
+}
+
+.btnHorario:focus
+{
+    border-color: #dedede;
+    border: 1px #dedede;
+    border-style: solid;
+    background-color: #e8e8e8;
+    outline: 0px;
+}
+
+.switch
+{
+    top: 2%;
+    left: 2%;
+    position: relative;
+    transition: left 1.7s;
+     -webkit-transition: left 1.7s;
+}
+
+.disabled
+{
+    cursor: not-allowed;
+    text-decoration: none;
+}
