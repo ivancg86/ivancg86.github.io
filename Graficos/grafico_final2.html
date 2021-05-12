@@ -15,18 +15,7 @@
 
 
 <body id="cuerpo">
-    <form class="form-horizontal" role="form">
-        <div class="form-group">
-            <div class="switch-button">
-                <!-- Checkbox -->
-                <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox"
-                    onclick="activar()">
-                <!-- Botón -->
-                <label for="switch-label" class="switch-button__label"></label>
-            </div>
-            
-        </div>
-    </form>
+    
 
     <svg width="960" height="500" id="grafico"></svg>
     <script>
@@ -145,23 +134,14 @@
                 .call(brush.move, x.range());
 
 
-            if (!boton.checked == true) {
+            
                 svg.append("rect")
                     .attr("class", "zoom")
                     .attr("width", width)
                     .attr("height", height)
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                     .call(zoom);
-            }
-            else {
-                
-            }
-             svg.append("rect")
-                .attr("class", "zoom")
-                .attr("width", width)
-                .attr("height", height)
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-                .call(zoom); 
+            
 
             console.log(data);
         });
