@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+  <style>
+    body {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+      display: none;
+    }
+
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    var myData = "date	New York	San Francisco	Austin	Barcelona\n\
+20111001	63.4	62.7	72.2	70.2\n\
+20111002	58.0	59.9	67.7	62.2\n\
+20111003	53.3	59.1	69.4	52.2\n\
+20111004	55.7	58.8	68.0	62.2\n\
+20111005	64.2	58.7	72.4	72.2\n\
+20111006	58.8	57.0	77.0	62.2\n\
+20111007	57.9	56.7	82.3	52.2\n\
+20111008	61.8	56.8	78.9	62.2\n\
+20111009	69.3	56.7	68.8	72.2\n\
+20111010	71.2	60.1	68.7	62.2\n\
+20111011	68.7	61.1	70.3	52.2\n\
+20111012	61.8	61.5	75.3	62.2\n\
+20111013	63.0	64.3	76.6	72.2\n\
+20111014	66.9	67.1	66.6	62.2\n\
+20111015	61.7	64.6	68.0	52.2\n\
+20111016	61.8	61.6	70.6	62.2\n\
+20111017	62.8	61.1	71.1	72.2\n\
+20111018	60.8	59.2	70.0	62.2\n\
+20111019	62.1	58.9	61.6	52.2\n\
+20111020	65.1	57.2	57.4	62.2\n\
+20111021	55.6	56.4	64.3	72.2\n\
+20111022	54.4	60.7	72.4	62.2\n";
+
+    var margin = {
+      top: 20,
+      right: 80,
+      bottom: 30,
+      left: 200
+    },
+      width = 1000 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
+
+    var marginAxis = 0;
+
+    var parseDate = d3.time.format("%Y%m%d").parse;
+
+    var x = d3.time.scale()
+      .range([0, width]);
+
+    var y = d3.scale.linear()
+      .range([height, 0]);
+
+    var color = d3.scale.category10();
+
+    var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom");
+
+    var yAxis = d3.svg.axis();
+
+    var line = d3.svg.line();
+
+    var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var data = d3.tsv.parse(myData);
+
+    color.domain(d3.keys(data[0]).filter(function (key) {
+      return key !== "date";
+    }));
+
+    data.forEach(function (d) {
+      d.date = parseDate(d.date);
+    });
+
+    var columns = color.domain().map(function (name) {
+      return {
+        name: name,
+        values: data.map(function (d) {
+          return {
+            date: d.date,
+            value: +d[name]
+          };
+        })
+      };
+    });
+
+    x.domain(d3.extent(data, function (d) {
+      return d.date;
+    }));
+
+    var legend = svg.selectAll('g')
+      .data(columns)
+      .enter()
+      .append('g')
+      .attr('class', 'legend');
+
+    rectangulo = legend.append('rect')
+      .attr('x', width + 10)
+      .attr('y', function (d, i) {
+        return i * 20;
+      })
+      .attr('width', 10)
+      .attr('height', 10)
+      .style('fill', function (d) {
+        return color(d.name);
+      });
+
+    legend.append('text')
+      .attr('x', width + 25)
+      .attr('y', function (d, i) {
+        return (i * 20) + 9;
+      })
+      .text(function (d) {
+        return d.name;
+      });
+
+    svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+    var i = 0;
+    var cont = 0;
+    var cont2 = 0;
+    var arrayY = [];
+    var arrayYaxis = [];
+    var arrayLine = [];
+    var axisYSVG = [];
+    var lineSVG = [];
+    var lineas = [];
+    var city;
+
+    /* columns.forEach(function (c) { 
+      var city = svg.append("g")
+      .attr("class", "city" + cont2);
+      cont2++;
+    }); */
+
+    var city = svg.selectAll(".city")
+      .data(columns)
+      .enter().append("g")
+      .attr("class", "city")
+      .attr("id", function (d) { return d.name.replace(/\s+/g, ''); });
+
+    var contador = 0;
+    var contadorColor = 0;
+    //Por cada columna recogemos el min y el max, se pasan los datos a la linea
+    //para que la dibuje, se crea el yAxis de cada linea con sus min y max y el color de cada linea
+    columns.forEach(function (c) {
+      console.log(c);
+
+
+      var y = d3.scale.linear()
+        .range([height, 0]);
+
+      var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+      y.domain([
+        d3.min(c.values, function (s) {
+          return s.value;
+        }),
+        d3.max(c.values, function (s) {
+          return s.value;
+        })
+      ]);
+
+      axisYSVG[i] = svg.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(" + marginAxis + "," + 0 + ")")
+        .style('fill', color(c.name))
+        .call(yAxis);
+
+
+      //Se genera en cada path la linea ----Fallo
+      //Generar en cada path una linea
+      //Si se saca del bucle no pilla bien los yAxis, sale desmontado
+      //Dentro se repite tantas veces como columnas hay
+
+
+      line = d3.svg.line()
+        .interpolate("basis")
+        .x(function (c) { return x(c.date); })
+        .y(function (c) { return y(c.value); });
+
+      lineas[i] = line;
+
+      lineSVG[i] = d3.select("#" + c.name.replace(/\s+/g, ''))
+        .append("path")
+        .attr("class", "line")
+        .attr("d", function () { return line(c.values); })
+        .style("stroke", function () { return color(c.name); });
+
+
+      arrayLine.push(line);
+      arrayYaxis.push(yAxis);
+      arrayY.push(y);
+      i++;
+      cont++;
+
+      //Margen entre cada yAxis
+      marginAxis -= 40;
+    });
+
+    city.append("text")
+      .datum(function (d) {
+        return {
+          name: d.name,
+          value: d.values[d.values.length - 1]
+        };
+      })
+      .attr("transform", function (d) {
+        return "translate(" + x(d.value.date) + "," + y(d.value.value) + ")";
+      })
+      .attr("x", 3)
+      /* .attr("dy", ".35em")
+      .text(function (d) {
+        return d.name;
+      }) */;
+
+    var mouseG = svg.append("g")
+      .attr("class", "mouse-over-effects");
+
+    mouseG.append("path") // this is the black vertical line to follow mouse
+      .attr("class", "mouse-line")
+      .style("stroke", "black")
+      .style("stroke-width", "1px")
+      .style("opacity", "0");
+
+    var lines = document.getElementsByClassName('line');
+    var circulo = [];
+    var textoCir = [];
+
+    var mousePerLine = mouseG.selectAll('.mouse-per-line')
+      .data(columns)
+      .enter()
+      .append("g")
+      .attr("class", "mouse-per-line");
+
+    circulo = mousePerLine.append("circle")
+      .attr("r", 7)
+      .style("stroke", function (d) {
+        return color(d.name);
+      })
+      .style("fill", "none")
+      .style("stroke-width", "1px")
+      .style("opacity", "0");
+
+    texto = mousePerLine.append("text")
+      .attr("transform", "translate(10,3)")
+      .style("fill", function (d) {
+        return color(d.name);
+      });
+
+    mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
+      .attr('width', width) // can't catch mouse events on a g element
+      .attr('height', height)
+      .attr('fill', 'none')
+      .attr('pointer-events', 'all')
+      .on('mouseout', function () { // on mouse out hide line, circles and text
+        d3.select(".mouse-line")
+          .style("opacity", "0");
+        d3.selectAll(".mouse-per-line circle")
+          .style("opacity", "0");
+        d3.selectAll(".mouse-per-line text")
+          .style("opacity", "0");
+      })
+      .on('mouseover', function () { // on mouse in show line, circles and text
+        d3.select(".mouse-line")
+          .style("opacity", "1");
+        d3.selectAll(".mouse-per-line circle")
+          .style("opacity", "1");
+        d3.selectAll(".mouse-per-line text")
+          .style("opacity", "1");
+      })
+      .on('mousemove', function () { // mouse moving over canvas
+        var mouse = d3.mouse(this);
+        d3.select(".mouse-line")
+          .attr("d", function () {
+            var d = "M" + mouse[0] + "," + height;
+            d += " " + mouse[0] + "," + 0;
+            return d;
+          });
+
+        var ypos = [];
+
+        d3.selectAll(".mouse-per-line")
+          .attr("transform", function (d, i) {
+            console.log(width / mouse[0])
+            var xDate = x.invert(mouse[0]),
+              bisect = d3.bisector(function (d) { return d.date; }).right;
+            idx = bisect(d.values, xDate);
+
+            var beginning = 0,
+              end = lines[i].getTotalLength(),
+              target = null;
+
+            while (true) {
+              target = Math.floor((beginning + end) / 2);
+              pos = lines[i].getPointAtLength(target);
+              if ((target === end || target === beginning) && pos.x !== mouse[0]) {
+                break;
+              }
+              if (pos.x > mouse[0]) end = target;
+              else if (pos.x < mouse[0]) beginning = target;
+              else break; //position found
+            }
+
+            //Cambiar dato por posición y 
+            d3.select(this).select('text')
+              .text(arrayY[i].invert(pos.y).toFixed(2));
+
+
+            //Interior text
+            //y.invert(pos.y).toFixed(2)
+
+            ypos.push({ ind: i, y: pos.y, off: 0 });
+            console.log(ypos);
+
+            return "translate(" + mouse[0] + "," + pos.y + ")";
+          })
+          .call(function (sel) {
+            ypos.sort(function (a, b) { return a.y - b.y; });
+            ypos.forEach(function (p, i) {
+              if (i > 0) {
+                var last = ypos[i - 1].y;
+                ypos[i].off = Math.max(0, (last + 15) - ypos[i].y);
+                ypos[i].y += ypos[i].off;
+              }
+            })
+            ypos.sort(function (a, b) { return a.ind - b.ind; });
+          })
+          .select("text")
+          .attr("transform", function (d, i) {
+            return "translate (10," + (3 + ypos[i].off) + ")";
+          });
+      });
+
+    var moverAxis = [];
+    var moverLine = [];
+    moverAxis = document.getElementsByClassName("y axis");
+    moverLine = d3.selectAll(".line");
+
+
+    // auto escalar linea
+    //Cambios a añadir---------------------------------------------------------------------------
+    function crearTabla() {
+      var conTab = 0;
+
+      var colores = [];
+
+      // Recogemos el body
+      var body = document.getElementsByTagName("body")[0];
+
+      // Creamos la tabla  y el cuerpo de ella misma
+      var tabla = document.createElement("table");
+      var tblBody = document.createElement("tbody");
+
+      // Creamos las celdas
+      for (var i = 0; i < columns.length; i++) {
+        // Creamos las hileras de la tabla
+        var hilera = document.createElement("tr");
+
+        // Creamos el relleno de cada hilera
+        //Creamos texto MIN
+        var celda = document.createElement("td");
+        var textoCelda = document.createTextNode(columns[conTab].name + " MIN");
+
+        //Creamos input MIN
+        var celda1 = document.createElement("td");
+        var input = document.createElement("input");
+        input.id = "min" + conTab;
+        input.className = "min" + conTab;
+        input.type = "number";
+        input.setAttribute('value', 50);
+        input.setAttribute('oninput', "cambiarTopes(" + conTab + ",)");
+
+        //Creamos texto MAX
+        var celda2 = document.createElement("td");
+        var textoCelda2 = document.createTextNode("MAX");
+        var celda3 = document.createElement("td");
+
+        //Creamos input MAX
+        var input2 = document.createElement("input");
+        input2.id = "max" + conTab;
+        input2.className = "max" + conTab;
+        input2.type = "number";
+        input2.setAttribute('value', 75);
+        input2.setAttribute('oninput', "cambiarTopes(" + conTab + ", false)");
+
+        //Cremos texto mostrar elementos
+        var celda4 = document.createElement("td");
+        var celda5 = document.createElement("td");
+        var textoCelda3 = document.createTextNode("Mostrar");
+
+        //Creamos checkbox mostrar
+        var invisible = document.createElement("input");
+        invisible.setAttribute("type", "checkbox");
+        invisible.id = "inv" + conTab;
+        invisible.setAttribute('onchange', "mostrar(" + conTab + ")");
+        invisible.checked = true;
+
+        //Creamos el select de los colores
+        var celda6 = document.createElement("td");
+        var colore = document.createElement("select");
+        colore.id = "colore" + conTab;
+        colore.setAttribute('onchange', "elegirColor(" + conTab + ")");
+
+        //Creamos el boton
+        var celda7 = document.createElement("td");
+        var boton = document.createElement("input");
+        boton.setAttribute("type", "button");
+        boton.setAttribute('onclick', "autoescalar(" + conTab + ", true)");
+        boton.id = "boton" + conTab;
+        boton.value = "Autoescalar";
+
+        //Anadimos los nombres y colores de fondo al elemento select
+        for (let p = 0; p < 10; p++) {
+          var option = document.createElement("option");
+          option.text = color(p);
+          option.style.backgroundColor = color(p);
+          option.id = color(p);
+          option.value = color(p);
+          colore.add(option);
+        }
+
+        //Agregamos a la pantalla todos los elementos
+        celda.appendChild(textoCelda);
+        hilera.appendChild(celda);
+        celda1.appendChild(input);
+        hilera.appendChild(celda1);
+        celda2.appendChild(textoCelda2);
+        hilera.appendChild(celda2);
+        celda3.appendChild(input2);
+        hilera.appendChild(celda3);
+        celda4.appendChild(textoCelda3);
+        hilera.appendChild(celda4);
+        celda5.appendChild(invisible);
+        hilera.appendChild(celda5);
+        celda6.appendChild(colore);
+        hilera.appendChild(celda6);
+        celda7.appendChild(boton);
+        hilera.appendChild(celda7);
+
+        conTab++;
+        //Añadimos la hilera al final de la tabla
+        tblBody.appendChild(hilera);
+      }
+
+      //Añadimos el cuerpo de la tabla a la tabla
+      tabla.appendChild(tblBody);
+      //Añadimos la tabla al body
+      body.appendChild(tabla);
+    }
+
+    function cambiarTopes(num, autoescala) {
+
+      if (autoescala == true) {
+        var columnas = [];
+        var i = 0;
+        //Recogemos todas las columnas en una array
+        columns.forEach(element => {
+          columnas[i] = element;
+          i++;
+        });
+
+        //Recogemos el min y el max
+        min = d3.min(columnas[num].values, function (s) {
+          return s.value;
+        });
+        max = d3.max(columnas[num].values, function (s) {
+          return s.value;
+        });
+      }
+      else {
+        //Recogemos el min y el max de los elementos selecionados
+        min = document.getElementById("min" + num).value;
+        max = document.getElementById("max" + num).value;
+      }
+
+
+
+      //Pasamos el nuevo dominio de la y
+      arrayY[num].domain([min, max]);
+
+      //Movemos el yAxis correpondiente a su nuevo dominio
+      axisYSVG[num].transition().duration(1500).call(arrayYaxis[num]);
+
+      //Movemos la linea correpondiente a su nuevo dominio
+      lineSVG[num].transition().duration(1500).attr("d", function (d) {
+        return lineas[num](d.values);
+      })
+    }
+
+    crearTabla();
+
+    function mostrar(num) {
+      //Recogemos el elemento seleccionado
+      var inv = document.getElementById("inv" + num);
+
+      var legends = [];
+      var circulos = [];
+      var colores = [];
+      var g = 0;
+      var h = 0;
+
+      //Recogemos todos los colores en una array
+      for (let index = 0; index < 10; index++) {
+        colores[index] = color(index);
+      }
+
+      //Recogemos todos los punteros en una array
+      mousePerLine.forEach(element => {
+        element.forEach(elemento => {
+          circulos[h] = elemento;
+          h++;
+        });
+      });
+
+      //recogemos todas las legendas en una array
+      legend.forEach(element => {
+        element.forEach(elemento => {
+          legends[g] = elemento;
+          g++;
+        });
+      });
+
+      //Si esta checked el elemento se muestra
+      if (inv.checked == true) {
+        lineSVG[num].style("opacity", 1);
+        axisYSVG[num].style("opacity", 1);
+        //circulos[num].style.opacity = 1;
+        legends[num].style.opacity = 1;
+      }
+      //Si no queda oculto
+      else {
+        lineSVG[num].style("opacity", 0);
+        axisYSVG[num].style("opacity", 0);
+        //circulos[num].style("opacity", 0);
+        legends[num].style.opacity = 0;
+      }
+
+    }
+
+    //Añadir leyenda y puntero movimiento
+    function elegirColor(num) {
+      var circulos = [];
+      var textos = [];
+      var rectangulos = [];
+      var h = 0;
+
+      //Pasamos todos los circulos de puntero a una array
+      circulo.forEach(element => {
+        element.forEach(elemento => {
+          circulos[h] = elemento;
+          h++;
+        });
+      });
+
+      //Pasamos todos los textos de puntero a una array
+      h = 0;
+      texto.forEach(element => {
+        element.forEach(elemento => {
+          textos[h] = elemento;
+          h++;
+        });
+      });
+
+      //Pasamos todos los rectangulos a una array
+      h = 0;
+      rectangulo.forEach(element => {
+        element.forEach(elemento => {
+          rectangulos[h] = elemento;
+          h++;
+        });
+      });
+
+      //Recogemos el color
+      var colore = document.getElementById("colore" + num).value;
+
+      //Pasamos a todos los elementos su color
+      lineSVG[num].style("stroke", colore);
+      axisYSVG[num].style("fill", colore);
+      circulos[num].style.stroke = colore;
+      textos[num].style.fill = colore;
+      rectangulos[num].style.fill = colore;
+    }
+
+    //funcion de autoescalar
+    function autoescalar(num) {
+      var columnas = [];
+      var i = 0;
+      //Recogemos todas las columnas en una array
+      columns.forEach(element => {
+        columnas[i] = element;
+        i++;
+      });
+
+      //Recogemos el min y el max
+      min = d3.min(columnas[num].values, function (s) {
+        return s.value;
+      });
+      max = d3.max(columnas[num].values, function (s) {
+        return s.value;
+      });
+
+      //Pasamos el nuevo dominio de la y
+      arrayY[num].domain([min, max]);
+
+      //Movemos el yAxis correpondiente a su nuevo dominio
+      axisYSVG[num].transition().duration(1500).call(arrayYaxis[num]);
+
+      //Movemos la linea correpondiente a su nuevo dominio
+      lineSVG[num].transition().duration(1500).attr("d", function (d) {
+        return lineas[num](d.values);
+      });
+
+    }
+
+  </script>
+</body>
+
+</html>
